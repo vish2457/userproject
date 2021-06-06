@@ -1,0 +1,94 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Booking
+{% endblock title %}
+
+{% block body %}
+<body  style="background: lemonchiffon">
+<div class="container center_div my-4">
+    <h1 class="text-center">Book your Ticket!!</h1>
+<form method="post" action="/payment">
+    {% csrf_token %}
+  <div class="mb-3">
+    <label for="Name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="Name" name="name" placeholder="Enter your name">
+  </div>
+    <div class="mb-3">
+    <label for="Address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="Address" name="Address" placeholder="Enter your address">
+  </div>
+    <div class="mb-3">
+    <label for="mobile_no" class="form-label">Mobile-no</label>
+    <input type="number" class="form-control" id="mobile_no" name="mobile_no" placeholder="Enter your mobile-no">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+  </div>
+  <div class="mb-3">
+    <label for="Age" class="form-label">Age</label>
+    <input type="number" class="form-control" id="Age" name="age" placeholder="Enter your age">
+  </div>
+  <div class="mb-3">
+    <label for="Aadhar_no" class="form-label">Aadhar_no</label>
+    <input type="number" class="form-control" id="Aadhar_no" name="aadhar_no" placeholder="Enter your aadhar_no">
+  </div>
+
+   <div class="mb-3">
+    <label for="source" class="form-label">Source</label>
+       <select typeof="text" name="source" id="source" class="dropdown-item">
+           <option value="Hubli">Hubli</option>
+           <option value="Bangalore">Bangalore</option>
+           <option value="Mumbai">Mumbai</option>
+           <option value="Delhi">Delhi</option>
+           <option value="Chennai">Chennai</option>
+           <option value="Kolkata">Kolkata</option>
+           <option value="Pune">Pune</option>
+           <option value="Lucknow">Lucknow</option>
+           <option value="Shimla">Shimla</option>
+       </select>
+   </div>
+
+    <div class="mb-3">
+    <label for="destination" class="form-label">Destination</label>
+        <select typeof="text" name="destination" id="destination" class="dropdown-item">
+           <option value="Hubli">Hubli</option>
+           <option value="Bangalore">Bangalore</option>
+           <option value="Mumbai">Mumbai</option>
+           <option value="Delhi">Delhi</option>
+           <option value="Chennai">Chennai</option>
+           <option value="Kolkata">Kolkata</option>
+           <option value="Pune">Pune</option>
+           <option value="Lucknow">Lucknow</option>
+           <option value="Shimla">Shimla</option>
+       </select>
+  </div>
+
+    <div class="mb-3">
+    <label for="Seat" class="form-label">Seat</label>
+        <select typeof="text" name="Seat" id="Seat" class="dropdown-item">
+           <option value="Economy">Economy</option>
+            <option value="First-Class">First-Class</option>
+           <option value="Business">Business</option>
+       </select>
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Book</button>
+</form>
+     </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+{% endblock body %}
+</body>
+

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Customer Details
+{% endblock title %}
+
+{% block body %}
+<body  style="background: lemonchiffon">
+<div class="container">
+	<center><h1><span class="yellow text-center">Booking Details</span></h1></center>
+	<br/>
+	<table class="table table-bordered table-dark">
+		<thead>
+			<tr class="table-dark">
+				<th><h1 class="heading-hover">Name</h1></th>
+				<th><h1 class="heading-hover">Address</h1></th>
+				<th><h1 class="heading-hover">Email</h1></th>
+				<th><h1 class="heading-hover">Mobile_no</h1></th>
+				<th><h1 class="heading-hover">Age</h1></th>
+				<th><h1 class="heading-hover">Aadhar_no</h1></th>
+				<th><h1 class="heading-hover">Source</h1></th>
+				<th><h1 class="heading-hover">Destination</h1></th>
+				<th><h1 class="heading-hover">Seat</h1></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for object in object_list %}
+			<tr>
+				<td>{{object.name}}</td>
+				<td>{{object.Address}}</td>
+				<td>{{object.email}}</td>
+				<td>{{object.mobile_no}}</td>
+				<td>{{object.age}}</td>
+				<td>{{object.aadhar_no}}</td>
+				<td>{{object.source}}</td>
+				<td>{{object.destination}}</td>
+				<td>{{object.Seat}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<br />
+	<h1>
+		<span class="yellow text-center">Total Ticket amount</span>
+	</h1>
+	<br />
+	<table class="table table-bordered">
+		<thead>
+			<tr class="table-dark">
+				<th><h1 class="heading-hover">Id</h1></th>
+				<th><h1 class="heading-hover">Amount</h1></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for key,value in amt %}
+			<tr>
+				<td>{{key}}</td>
+				<td>{{value}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+</body>
+{% endblock body %}

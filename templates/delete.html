@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Cancellation
+{% endblock title %}
+
+{% block body %}
+<body style="background:lemonchiffon">
+<div class="container center_div my-4">
+    <h1 class="text-center">You can cancel your Flight Ticket here!!!</h1>
+    <form method="POST" action="/delete">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+        <div class="mb-3">
+        <label for="aadhar_no" class="form-label">Aadhar_no</label>
+        <input type="text" class="form-control" id="aadhar_no" name="aadhar_no" placeholder="Enter your Aadhar_no">
+        </div>
+        <p>NOTE:-</p>
+        <h4>Rs-249/- is the Cancellation Charge</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p> Proceed Yes to cancel the ticket !!</p>
+        <input type="submit" value="Cancel the Ticket" />
+        <a href="/">Back </a>
+    </form>
+</div>
+</body>
+{% endblock body %}
